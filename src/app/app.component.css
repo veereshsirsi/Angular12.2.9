@@ -1,0 +1,10 @@
+.heading {
+    hight: 10px;
+    width: 100%;
+    border: 2px;
+    padding: 12px;
+    text-align: center;
+    background-color: honeydew;
+    font-weight: 16px;
+    font-size: 40px;
+}
