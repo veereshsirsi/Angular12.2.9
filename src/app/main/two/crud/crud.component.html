@@ -2,26 +2,49 @@
     <div class="container">
         <div class="crudHeader">
             <hr>
-            <label for="crudHeader" class="headerStyle">CRUD Header</label>
+            <label for="crudHeader" class="headerStyle">CRUD Operations</label>
             <hr>
         </div>
         
         <div>
             <table class="table">
                 <thead>
-                    <tr>
+                    <tr class="headerDefault">
                         <th>Id</th>
                         <th>Name</th>
                         <th>Number</th>
                         <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <input type="number" class="form form-control" [(ngModel)]="id">
+                        </th>
+                        <th>
+                            <input type="text" class="form form-control" [(ngModel)]="name">
+                        </th>
+                        <th>
+                            <input type="number" class="form form-control" [(ngModel)]="number">
+                        </th>
+                        <th>
+                            <input type="email" class="form form-control" [(ngModel)]="email">
+                        </th>
+                        <th>
+                            <button class="btn btn-primary" (click)="add()">Add</button>&nbsp;
+                            <button class="btn btn-info" (click)="save()">Save</button>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let detail of details">
+                    <tr *ngFor="let detail of details; let i = index" class="headerDefault">
                         <td>{{detail.id}}</td>
                         <td>{{detail.name}}</td>
                         <td>{{detail.number}}</td>
                         <td>{{detail.email}}</td>
+                        <td>
+                            <button class="btn btn-warning" (click)="edit(i)">Edit</button>&nbsp;
+                            <button class="btn btn-danger" (click)="del(i)">Del</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>

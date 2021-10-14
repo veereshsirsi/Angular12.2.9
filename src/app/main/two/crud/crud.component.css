@@ -6,3 +6,6 @@
     font-size: 24px;
     color: darkcyan;
 }
+tr.headerDefault {
+    text-align: center;
+}

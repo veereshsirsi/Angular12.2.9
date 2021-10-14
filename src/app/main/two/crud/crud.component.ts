@@ -8,6 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class CrudComponent implements OnInit {
 
   public details:any;
+  public id:any;
+  public name:any;
+  public number:any;
+  public email:any;
+  private saveIndex:any;
+  
 
   constructor() { }
 
@@ -20,5 +26,37 @@ export class CrudComponent implements OnInit {
       {id:115, name:'praveen', number:238, email:'praveen@gmail.com'},
     ]
   }
-
+  add(){
+    this.details.push({
+      id:this.id,
+      name:this.name,
+      number:this.number,
+      email:this.email,
+    })
+    this.empty();
+    
+  }
+  save(){
+    this.details[this.saveIndex].id = this.id;
+    this.details[this.saveIndex].name = this.name;
+    this.details[this.saveIndex].number = this.number;
+    this.details[this.saveIndex].email = this.email;
+    this.empty();
+  }
+  edit(index:number){
+    this.saveIndex = index;
+    this.id = this.details[index].id;
+    this.name = this.details[index].name;
+    this.number = this.details[index].number;
+    this.email = this.details[index].email;
+  }
+  del(index:number){
+    this.details.splice(index, 1);
+  }
+  empty(){
+    this.id = '';
+    this.name = '';
+    this.number = '';
+    this.email = '';
+  }
 }
