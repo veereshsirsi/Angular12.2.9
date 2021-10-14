@@ -9,6 +9,8 @@ import { ChildComponent } from './main/one/child/child.component';
 import { Children1Component } from './main/one/children1/children1.component';
 import { Children2Component } from './main/one/children2/children2.component';
 import { FiltersPipe } from './filters.pipe';
+import { CrudComponent } from './main/two/crud/crud.component';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { FiltersPipe } from './filters.pipe';
     ChildComponent,
     Children1Component,
     Children2Component,
-    FiltersPipe
+    FiltersPipe,
+    CrudComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,3 +7,16 @@
     font-weight: 16px;
     font-size: 40px;
 }
+.sideNav {
+    height: 100%;
+    width: 15%;
+    background-color: #70afbb;
+    position: fixed;
+    font-size: 25px;
+}
+.mainWork{
+    position: relative;
+    left: 18%;
+    width: 80%;
+    padding-top: 2%;
+}
