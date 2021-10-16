@@ -1,0 +1,47 @@
+<div>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="loginformbox">
+            <div class="row">
+                
+                <div class="col-sm-12">
+                    <input type="text" class="form form-control"  placeholder="User Name" formControlName="userName">
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                
+                <div class="col-sm-12">
+                    <input type="password" class="form form-control" placeholder="New Password" formControlName="newPassword">
+                </div>
+            </div>
+            <br>
+            <div formArrayName="langName" *ngFor="let detail of registerForm.get('langName').controls; let i=index;">
+                <div [formGroupName]="i">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="text" class="form form-control" placeholder="Languages" formControlName="lange">
+                        </div>
+                        <!-- <span><i (click)="addNewRow()">&#10010;</i></span> -->
+                        <div class="col-sm-1">
+                            <i (click)="delRow(i)" class="delColor">&#10006;</i>
+                        </div>
+                        <div class="col-sm-1">
+                            <button class="btn btn-info personal" (click)="addNewRow()">Add</button>
+                        </div>
+                        <!-- <div class="col-sm-1">
+                            <button>&#10006;</button>
+                        </div> -->
+                    </div>
+                    <br>
+                </div>
+            </div>
+                
+            <br>
+            <div class="row">
+                <div class="col-sm-4">
+                    <button class="btn btn-info personal" type="submit">Register</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

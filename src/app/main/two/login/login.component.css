@@ -1,0 +1,22 @@
+.LoginHeader {
+    text-align: center;
+}
+.headerStyle{
+    font-size: 24px;
+    color: darkcyan;
+}
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+}
+.loginformbox {
+    
+    border: 2px;
+    padding: 50px;
+    background-color: beige;
+    text-align: center;
+}
+.personal{
+    background-color: aliceblue;
+    width:100px;
+}

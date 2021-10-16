@@ -1,0 +1,46 @@
+<div>
+    <div class="LoginHeader">
+        <hr>
+            <label for="loginHeader" class="headerStyle">{{title}}</label>
+        <hr>
+    </div>
+    <div class="flex-container">
+        <div>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="loginformbox">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">User Name : </label>
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="text" class="form form-control" formControlName="userName">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="">Password : </label>
+                        </div>
+                        <div class="col-sm-8">
+                            <input type="password" class="form form-control" formControlName="password">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <button class="btn btn-info personal" type="submit">Login</button>
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-info personal" (click)="newUser()">New User</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div *ngIf="newUserModal">
+            <register-app></register-app>
+        </div>
+    </div>
+    
+    
+</div>

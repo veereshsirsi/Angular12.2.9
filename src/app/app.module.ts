@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -12,6 +12,8 @@ import { Children2Component } from './main/one/children2/children2.component';
 import { FiltersPipe } from './filters.pipe';
 import { CrudComponent } from './main/two/crud/crud.component';
 import { AppRoutingModule } from './app.routing.module';
+import { LoginComponent } from './main/two/login/login.component';
+import { RegisterComponent } from './main/two/register/register.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { AppRoutingModule } from './app.routing.module';
     Children1Component,
     Children2Component,
     FiltersPipe,
-    CrudComponent
+    CrudComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

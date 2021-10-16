@@ -1,0 +1,14 @@
+.loginformbox {
+    
+    border: 2px;
+    padding: 50px;
+    background-color: beige;
+    text-align: center;
+}
+.personal{
+    background-color: aliceblue;
+    width:100px;
+}
+.delColor{
+    color: red;
+}
